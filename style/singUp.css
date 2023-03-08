@@ -85,10 +85,10 @@ body {
   font: 400 16px "Poppins";
   color: #292731;
 }
-.welcom-back-wrapper .log-in-wrapper {
+.welcom-back-wrapper .reg-wrapper {
   padding-top: 62px;
 }
-.welcom-back-wrapper .log-in-wrapper .first-input {
+.welcom-back-wrapper .reg-wrapper .first-input {
   margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,11 +97,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.welcom-back-wrapper .log-in-wrapper .first-input p {
+.welcom-back-wrapper .reg-wrapper .first-input p {
   font: 500 16px "Poppins";
   color: #455360;
 }
-.welcom-back-wrapper .log-in-wrapper .first-input .warning-img {
+.welcom-back-wrapper .reg-wrapper .first-input .warning-img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -111,7 +111,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.welcom-back-wrapper .log-in-wrapper .login {
+.welcom-back-wrapper .reg-wrapper .login {
   width: 100%;
   padding: 12px 0 9px 22px;
   background-color: #ecf2f7;
@@ -119,37 +119,37 @@ body {
   outline: none;
   border: 1px solid #fff;
 }
-.welcom-back-wrapper .log-in-wrapper .login::-webkit-input-placeholder {
+.welcom-back-wrapper .reg-wrapper .login::-webkit-input-placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper .login::-moz-placeholder {
+.welcom-back-wrapper .reg-wrapper .login::-moz-placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper .login:-ms-input-placeholder {
+.welcom-back-wrapper .reg-wrapper .login:-ms-input-placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper .login::-ms-input-placeholder {
+.welcom-back-wrapper .reg-wrapper .login::-ms-input-placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper .login::placeholder {
+.welcom-back-wrapper .reg-wrapper .login::placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper .password {
+.welcom-back-wrapper .reg-wrapper .password {
   padding: 30px 0 10px 0;
   font: 500 16px "Poppins";
   color: #455360;
 }
-.welcom-back-wrapper .log-in-wrapper .pass {
+.welcom-back-wrapper .reg-wrapper .pass {
   width: 100%;
   padding: 12px 0 9px 22px;
   background-color: #ecf2f7;
@@ -157,35 +157,68 @@ body {
   outline: none;
   border: 1px solid #fff;
 }
-.welcom-back-wrapper .log-in-wrapper .pass::-webkit-input-placeholder {
+.welcom-back-wrapper .reg-wrapper .pass::-webkit-input-placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper .pass::-moz-placeholder {
+.welcom-back-wrapper .reg-wrapper .pass::-moz-placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper .pass:-ms-input-placeholder {
+.welcom-back-wrapper .reg-wrapper .pass:-ms-input-placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper .pass::-ms-input-placeholder {
+.welcom-back-wrapper .reg-wrapper .pass::-ms-input-placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper .pass::placeholder {
+.welcom-back-wrapper .reg-wrapper .pass::placeholder {
   font: 400 16px "Poppins";
   color: #7b8389;
   opacity: 0.4;
 }
-.welcom-back-wrapper .log-in-wrapper a {
+.welcom-back-wrapper .reg-wrapper .confirm-password {
+  width: 100%;
+  padding: 12px 0 9px 22px;
+  background-color: #ecf2f7;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #fff;
+}
+.welcom-back-wrapper .reg-wrapper .confirm-password::-webkit-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7b8389;
+  opacity: 0.4;
+}
+.welcom-back-wrapper .reg-wrapper .confirm-password::-moz-placeholder {
+  font: 400 16px "Poppins";
+  color: #7b8389;
+  opacity: 0.4;
+}
+.welcom-back-wrapper .reg-wrapper .confirm-password:-ms-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7b8389;
+  opacity: 0.4;
+}
+.welcom-back-wrapper .reg-wrapper .confirm-password::-ms-input-placeholder {
+  font: 400 16px "Poppins";
+  color: #7b8389;
+  opacity: 0.4;
+}
+.welcom-back-wrapper .reg-wrapper .confirm-password::placeholder {
+  font: 400 16px "Poppins";
+  color: #7b8389;
+  opacity: 0.4;
+}
+.welcom-back-wrapper .reg-wrapper a {
   text-decoration: none;
 }
-.welcom-back-wrapper .log-in-wrapper a .btn-logIn {
+.welcom-back-wrapper .reg-wrapper a .btn-logIn {
   margin-top: 44px;
   width: 100%;
   background-color: #4c70ff;
@@ -195,15 +228,15 @@ body {
   padding: 10px 0;
   border-radius: 8px;
 }
-.welcom-back-wrapper .log-in-wrapper .sign-in {
+.welcom-back-wrapper .reg-wrapper .sign-in {
   padding-top: 20px;
   text-align: center;
 }
-.welcom-back-wrapper .log-in-wrapper .sign-in p {
+.welcom-back-wrapper .reg-wrapper .sign-in p {
   font: 500 16px "Poppins";
   color: #292731;
 }
-.welcom-back-wrapper .log-in-wrapper .sign-in p a {
+.welcom-back-wrapper .reg-wrapper .sign-in p a {
   color: #66bce8;
   font: 500 16px "Poppins";
   text-decoration: none;

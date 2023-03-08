@@ -94,7 +94,7 @@ body {
 
   //------------log-in----------------------------------
 
-  .log-in-wrapper {
+  .reg-wrapper {
     padding-top: 62px;
 
     .first-input {
@@ -139,6 +139,21 @@ body {
     }
 
     .pass {
+      width: 100%;
+      padding: 12px 0 9px 22px;
+      background-color: $input-color;
+      border-radius: 4px;
+      outline: none;
+      border: 1px solid $white-color;
+
+      &::placeholder {
+        font: 400 16px "Poppins";
+        color: $lightGrey-color;
+        opacity: 0.4;
+      }
+    }
+
+    .confirm-password {
       width: 100%;
       padding: 12px 0 9px 22px;
       background-color: $input-color;
