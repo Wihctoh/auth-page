@@ -1,0 +1,184 @@
+// ----------------------color-variables--------------------
+
+$white-color: #fff;
+$backgroudLeft-color: #e2f0ff;
+$backgroudRight-color: #f5f5f5;
+$blue-color: #4c70ff;
+$lightBlue-color: #66bce8;
+$darkBlue-color: #292731;
+$lightGrey-color: #7b8389;
+$darkGrey-color: #455360;
+$input-color: #ecf2f7;
+
+//-------------------------other----------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1450px;
+  margin: 0 auto;
+  font-style: normal;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: space-between;
+}
+
+// --------------------Intro-section-----------------------
+
+.intro {
+  padding: 174px 0 224px 0;
+  width: 50%;
+  background-color: $backgroudLeft-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .intro-img {
+    background-image: url(../assets/main-img.png);
+    width: 524px;
+    height: 391px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  h2 {
+    margin-top: 56px;
+    width: 400px;
+    font: 600 26px "Poppins";
+    line-height: 131.5%;
+    color: $darkBlue-color;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 23px;
+    width: 386px;
+    font: 400 16px "Poppins";
+    line-height: 170%;
+    color: $darkGrey-color;
+    text-align: center;
+  }
+}
+
+// --------------------welcom-back-section--------------------
+
+.welcom-back-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  padding-top: 166px;
+
+  .hello-img {
+    background-image: url(../assets/waving-hand.svg);
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  h2 {
+    padding-top: 12px;
+    font: 600 30px "Poppins";
+    color: $darkBlue-color;
+  }
+
+  p {
+    padding-top: 12px;
+    font: 400 16px "Poppins";
+    color: $darkBlue-color;
+  }
+
+  //------------log-in----------------------------------
+
+  .log-in-wrapper {
+    padding-top: 62px;
+
+    .first-input {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font: 500 16px "Poppins";
+        color: $darkGrey-color;
+      }
+
+      .warning-img {
+        align-self: center;
+        background-image: url(../assets/alert-circle.svg);
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .login {
+      width: 100%;
+      padding: 12px 0 9px 22px;
+      background-color: $input-color;
+      border-radius: 4px;
+      border: 1px solid $white-color;
+
+      &::placeholder {
+        font: 400 16px "Poppins";
+        color: $lightGrey-color;
+        opacity: 0.4;
+      }
+    }
+
+    .password {
+      padding: 30px 0 10px 0;
+      font: 500 16px "Poppins";
+      color: $darkGrey-color;
+    }
+
+    .pass {
+      width: 100%;
+      padding: 12px 0 9px 22px;
+      background-color: $input-color;
+      border-radius: 4px;
+      border: 1px solid $white-color;
+
+      &::placeholder {
+        font: 400 16px "Poppins";
+        color: $lightGrey-color;
+        opacity: 0.4;
+      }
+    }
+    a {
+      text-decoration: none;
+	  
+      .btn-logIn {
+        margin-top: 44px;
+        width: 100%;
+        background-color: $blue-color;
+        color: $white-color;
+        font: 500 20px "Poppins";
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 8px;
+      }
+    }
+
+    .sign-in {
+      padding-top: 20px;
+      text-align: center;
+      p {
+        font: 500 16px "Poppins";
+        color: $darkBlue-color;
+
+        a {
+          color: $lightBlue-color;
+
+          font: 500 16px "Poppins";
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
