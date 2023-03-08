@@ -116,6 +116,7 @@ body {
   padding: 12px 0 9px 22px;
   background-color: #ecf2f7;
   border-radius: 4px;
+  outline: none;
   border: 1px solid #fff;
 }
 .welcom-back-wrapper .log-in-wrapper .login::-webkit-input-placeholder {
@@ -153,6 +154,7 @@ body {
   padding: 12px 0 9px 22px;
   background-color: #ecf2f7;
   border-radius: 4px;
+  outline: none;
   border: 1px solid #fff;
 }
 .welcom-back-wrapper .log-in-wrapper .pass::-webkit-input-placeholder {

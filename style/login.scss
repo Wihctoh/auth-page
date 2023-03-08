@@ -122,6 +122,7 @@ body {
       padding: 12px 0 9px 22px;
       background-color: $input-color;
       border-radius: 4px;
+      outline: none;
       border: 1px solid $white-color;
 
       &::placeholder {
@@ -142,6 +143,7 @@ body {
       padding: 12px 0 9px 22px;
       background-color: $input-color;
       border-radius: 4px;
+      outline: none;
       border: 1px solid $white-color;
 
       &::placeholder {
@@ -152,7 +154,7 @@ body {
     }
     a {
       text-decoration: none;
-	  
+
       .btn-logIn {
         margin-top: 44px;
         width: 100%;
