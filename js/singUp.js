@@ -17,6 +17,15 @@ function errorMessges2HtmlStyle() {
   ErrMeslogin.appendChild(ErrMesPassEl);
 }
 
+function errorMessges3HtmlStyle() {
+  const ErrMeslogin = document.querySelector(".passP");
+  let ErrMesPassEl = document.createElement("p");
+
+  ErrMesPassEl.setAttribute("class", "ErrMesPassEl2");
+  ErrMesPassEl.innerHTML = "password mismatch";
+  ErrMeslogin.appendChild(ErrMesPassEl);
+}
+
 function isValid(inpLogin_, inpPass_, inpPassConfirm_) {
   if (!inpLogin_.value && !inpPass_.value && !inpPassConfirm_.value) {
     inpLogin_.style = "border: 1px solid red";
@@ -53,6 +62,8 @@ function isValid(inpLogin_, inpPass_, inpPassConfirm_) {
     inpPass_.value = "";
     inpPassConfirm_.value = "";
 
+    errorMessges3HtmlStyle();
+
     throw new Error("Password mismatch!");
   }
 }
@@ -66,6 +77,10 @@ document.querySelector(".btn-logIn").addEventListener("click", function () {
     isValid(inpLogin, inpPass, inpPassConfirm);
 
     alert("You are successfully registered in the system");
+
+    inpLogin.style = "border: 1px solid #7FFF00";
+    inpPass.style = "border: 1px solid #7FFF00";
+    inpPassConfirm.style = "border: 1px solid #7FFF00";
   } catch (error) {
     alert(error.message);
   }
@@ -73,19 +88,21 @@ document.querySelector(".btn-logIn").addEventListener("click", function () {
 
 document.querySelector(".login").addEventListener("click", function () {
   this.style = "border: 1px solid #fff";
+
   let del = document.querySelector(".ErrMesloginEl");
 
   if (del != null) {
-    del.setAttribute("hidden", true);
+    del.remove();
   }
 });
 
 document.querySelector(".pass").addEventListener("click", function () {
   this.style = "border: 1px solid #fff";
+
   let del = document.querySelector(".ErrMesPassEl");
 
   if (del != null) {
-    del.setAttribute("hidden", true);
+    del.remove();
   }
 });
 
@@ -93,4 +110,10 @@ document
   .querySelector(".confirm-password")
   .addEventListener("click", function () {
     this.style = "border: 1px solid #fff";
+
+    let del = document.querySelector(".ErrMesPassEl2");
+
+    if (del != null) {
+      del.remove();
+    }
   });

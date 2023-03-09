@@ -54,6 +54,9 @@ document.querySelector(".btn-logIn").addEventListener("click", function () {
 
     isValid(inpLogin, inpPass);
 
+    inpLogin.style = "border: 1px solid #7FFF00";
+    inpPass.style = "border: 1px solid #7FFF00";
+
     alert("You are successfully authorized in the system");
   } catch (error) {
     alert(error.message);
@@ -65,9 +68,8 @@ document.querySelector(".login").addEventListener("click", function () {
 
   let del = document.querySelector(".ErrMesloginEl");
 
-  console.log(del);
   if (del != null) {
-    del.setAttribute("hidden", true);
+    del.remove();
   }
 });
 
@@ -77,6 +79,6 @@ document.querySelector(".pass").addEventListener("click", function () {
   let del = document.querySelector(".ErrMesPassEl");
 
   if (del != null) {
-    del.setAttribute("hidden", true);
+    del.remove();
   }
 });
