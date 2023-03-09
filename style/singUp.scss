@@ -102,7 +102,7 @@ body {
       display: flex;
       justify-content: space-between;
 
-      p {
+      .first-input-p {
         font: 500 16px "Poppins";
         color: $darkGrey-color;
       }
@@ -198,4 +198,12 @@ body {
       }
     }
   }
+}
+
+//------------JS-add---------------------
+
+.ErrMesloginEl,
+.ErrMesPassEl {
+  font: 500 13px "Poppins";
+  color: red;
 }

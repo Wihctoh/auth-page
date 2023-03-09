@@ -97,7 +97,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.welcom-back-wrapper .log-in-wrapper .first-input p {
+.welcom-back-wrapper .log-in-wrapper .first-input .first-input-p {
   font: 500 16px "Poppins";
   color: #455360;
 }
@@ -207,4 +207,10 @@ body {
   color: #66bce8;
   font: 500 16px "Poppins";
   text-decoration: none;
+}
+
+.ErrMesloginEl,
+.ErrMesPassEl {
+  font: 500 13px "Poppins";
+  color: red;
 }
