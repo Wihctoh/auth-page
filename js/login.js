@@ -1,6 +1,8 @@
-function errorMessges1HtmlStyle() {
+let errEl = document.createElement("p");
+
+function addErrorMessageInLoginHTML() {
   const ErrMeslogin = document.querySelector(".first-input p");
-  let ErrMesloginEl = document.createElement("p");
+  let ErrMesloginEl = errEl;
 
   ErrMesloginEl.setAttribute("class", "ErrMesloginEl");
   ErrMesloginEl.innerHTML =
@@ -8,19 +10,23 @@ function errorMessges1HtmlStyle() {
   ErrMeslogin.appendChild(ErrMesloginEl);
 }
 
-function errorMessges2HtmlStyle() {
+function addErrorMessageInPasswordHTML() {
   const ErrMeslogin = document.querySelector(".password");
-  let ErrMesPassEl = document.createElement("p");
+  let ErrMesPassEl = errEl;
 
   ErrMesPassEl.setAttribute("class", "ErrMesPassEl");
   ErrMesPassEl.innerHTML = "password must be at least 8 characters";
   ErrMeslogin.appendChild(ErrMesPassEl);
 }
 
+let styleBorderRed = "border: 1px solid red";
+let styleBorderGreen = "border: 1px solid #7FFF00";
+let styleBorderWhite = "border: 1px solid #fff";
+
 function isValid(inpLogin_, inpPass_) {
   if (!inpLogin_.value && !inpPass_.value) {
-    inpLogin_.style = "border: 1px solid red";
-    inpPass_.style = "border: 1px solid red";
+    inpLogin_.style = styleBorderRed;
+    inpPass_.style = styleBorderRed;
 
     throw new Error("enter your login and password");
   }
@@ -29,42 +35,42 @@ function isValid(inpLogin_, inpPass_) {
     !/^\+[0-9]{3,3}[0-9]{2,2}[0-9]{7,7}$/gm.test(inpLogin_.value) &&
     !/^\w+\@[a-zA-Z]+\.[a-z]{2,4}$/gm.test(inpLogin_.value)
   ) {
-    inpLogin_.style = "border: 1px solid red";
+    inpLogin_.style = styleBorderRed;
     inpLogin_.value = "";
 
-    errorMessges1HtmlStyle();
+    addErrorMessageInLoginHTML();
 
     throw new Error("email or number is not correct");
   }
 
   if (!/^\w{8,}$/gm.test(inpPass_.value)) {
-    inpPass_.style = "border: 1px solid red";
+    inpPass_.style = styleBorderRed;
     inpPass_.value = "";
 
-    errorMessges2HtmlStyle();
+    addErrorMessageInPasswordHTML();
 
     throw new Error("password must be at least 8 characters");
   }
 }
 
+const inpLogin = document.querySelector(".login");
+const inpPass = document.querySelector(".pass");
+
 document.querySelector(".btn-logIn").addEventListener("click", function () {
   try {
-    const inpLogin = document.querySelector(".login");
-    const inpPass = document.querySelector(".pass");
-
     isValid(inpLogin, inpPass);
 
-    inpLogin.style = "border: 1px solid #7FFF00";
-    inpPass.style = "border: 1px solid #7FFF00";
-
     alert("You are successfully authorized in the system");
+
+    inpLogin.style = styleBorderGreen;
+    inpPass.style = styleBorderGreen;
   } catch (error) {
     alert(error.message);
   }
 });
 
-document.querySelector(".login").addEventListener("click", function () {
-  this.style = "border: 1px solid #fff";
+inpLogin.addEventListener("click", function () {
+  this.style = styleBorderWhite;
 
   let del = document.querySelector(".ErrMesloginEl");
 
@@ -73,8 +79,8 @@ document.querySelector(".login").addEventListener("click", function () {
   }
 });
 
-document.querySelector(".pass").addEventListener("click", function () {
-  this.style = "border: 1px solid #fff";
+inpPass.addEventListener("click", function () {
+  this.style = styleBorderWhite;
 
   let del = document.querySelector(".ErrMesPassEl");
 
