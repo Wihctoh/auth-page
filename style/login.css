@@ -6,16 +6,14 @@
 }
 
 body {
-  width: 1450px;
+  width: 1420px;
   margin: 0 auto;
   font-style: normal;
   font-family: "Poppins";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 135px;
 }
 
 .intro {
