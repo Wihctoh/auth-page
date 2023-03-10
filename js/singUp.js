@@ -17,10 +17,20 @@ function errorMessges2HtmlStyle() {
   ErrMeslogin.appendChild(ErrMesPassEl);
 }
 
-function isValid(inpLogin_, inpPass_) {
-  if (!inpLogin_.value && !inpPass_.value) {
+function errorMessges3HtmlStyle() {
+  const ErrMeslogin = document.querySelector(".passP");
+  let ErrMesPassEl = document.createElement("p");
+
+  ErrMesPassEl.setAttribute("class", "ErrMesPassEl2");
+  ErrMesPassEl.innerHTML = "password mismatch";
+  ErrMeslogin.appendChild(ErrMesPassEl);
+}
+
+function isValid(inpLogin_, inpPass_, inpPassConfirm_) {
+  if (!inpLogin_.value && !inpPass_.value && !inpPassConfirm_.value) {
     inpLogin_.style = "border: 1px solid red";
     inpPass_.style = "border: 1px solid red";
+    inpPassConfirm_.style = "border: 1px solid red";
 
     throw new Error("enter your login and password");
   }
@@ -45,19 +55,32 @@ function isValid(inpLogin_, inpPass_) {
 
     throw new Error("password must be at least 8 characters");
   }
+
+  if (inpPass_.value != inpPassConfirm_.value) {
+    inpPass_.style = "border: 1px solid red";
+    inpPassConfirm_.style = "border: 1px solid red";
+    inpPass_.value = "";
+    inpPassConfirm_.value = "";
+
+    errorMessges3HtmlStyle();
+
+    throw new Error("Password mismatch!");
+  }
 }
 
 document.querySelector(".btn-logIn").addEventListener("click", function () {
   try {
     const inpLogin = document.querySelector(".login");
     const inpPass = document.querySelector(".pass");
+    const inpPassConfirm = document.querySelector(".confirm-password");
 
-    isValid(inpLogin, inpPass);
+    isValid(inpLogin, inpPass, inpPassConfirm);
+
+    alert("You are successfully registered in the system");
 
     inpLogin.style = "border: 1px solid #7FFF00";
     inpPass.style = "border: 1px solid #7FFF00";
-
-    alert("You are successfully authorized in the system");
+    inpPassConfirm.style = "border: 1px solid #7FFF00";
   } catch (error) {
     alert(error.message);
   }
@@ -82,3 +105,15 @@ document.querySelector(".pass").addEventListener("click", function () {
     del.remove();
   }
 });
+
+document
+  .querySelector(".confirm-password")
+  .addEventListener("click", function () {
+    this.style = "border: 1px solid #fff";
+
+    let del = document.querySelector(".ErrMesPassEl2");
+
+    if (del != null) {
+      del.remove();
+    }
+  });

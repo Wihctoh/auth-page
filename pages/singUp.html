@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/login.css" />
+    <link rel="stylesheet" href="../style/singUp.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,11 +27,11 @@
     <section class="welcom-back-wrapper">
       <div class="hello-img"></div>
 
-      <h2>Welcome back!</h2>
+      <h2>Join us!</h2>
 
-      <p class="main">Please login to access your account.</p>
+      <p class="main">Enter your information and join us.</p>
 
-      <div class="log-in-wrapper">
+      <div class="reg-wrapper">
         <div class="first-input">
           <p class="first-input-p">E-mail or phone number</p>
           <div class="warning-img"></div>
@@ -47,16 +47,24 @@
 
         <input class="pass" type="password" placeholder="Type your password" />
 
-        <a href="#"><div class="btn-logIn">Log In</div></a>
+        <p class="passP">Confirm Password</p>
+
+        <input
+          class="confirm-password"
+          type="password"
+          placeholder="Confirm your password"
+        />
+
+        <a href="#"><div class="btn-logIn">Sing up</div></a>
 
         <div class="sign-in">
           <p>
-            Don't have an account? <a href="../pages/singUp.html">Sign Up</a>
+            Already have an account? <a href="../pages/login.html">Sign in</a>
           </p>
         </div>
       </div>
     </section>
 
-    <script src="../js/login.js"></script>
+    <script src="../js/singUp.js"></script>
   </body>
 </html>
